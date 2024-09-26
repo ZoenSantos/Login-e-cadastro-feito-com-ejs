@@ -8,6 +8,7 @@ const app = express();
 
 // Configurando o motor de visualização EJS
 app.set('views', path.join(__dirname, 'view'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
 // Middleware para analisar o corpo das requisições
